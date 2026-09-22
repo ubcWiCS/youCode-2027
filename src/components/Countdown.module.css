@@ -1,0 +1,48 @@
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 32px auto 0;
+}
+
+.unitGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  background: rgba(212, 201, 255, 0.15);
+  border: 1px solid var(--mint);
+}
+
+.value {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(22px, 3.4vw, 32px);
+  color: var(--cream);
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--mint);
+  margin-top: 4px;
+}
+
+.colon {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(18px, 2.6vw, 26px);
+  color: var(--mint);
+  padding-bottom: 14px;
+}

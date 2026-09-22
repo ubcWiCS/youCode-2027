@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --purple-light: #9F86FF;
+  --purple-pale: #D4C9FF;
+  --navy: #120266;
+  --teal: #00927C;
+  --blue: #1468E4;
+  --mint: #ACF1B5;
+  --ice-blue: #E6F0FF;
+  --cream: #FFFCEF;
+  --text-heading: #E6F0FF;
+  --text-heading-soft: #D4C9FF
+  --font-display: 'DM Serif Display', Georgia, serif;  
+  --font-body: 'Montserrat', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
