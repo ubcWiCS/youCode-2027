@@ -1,10 +1,13 @@
 import WaveBackground from './WaveBackground'
 import styles from './Hero.module.css'
+import countdownDevice from '../assets/countdown.svg'
 
 export default function Hero() {
   return (
     <section className={styles.hero} id="top">
       <img src="/images/group-r-5.svg" className={styles.circuits} alt="" aria-hidden="true" />
+      <img src={countdownDevice} className={styles.countdownDevice} alt="" aria-hidden="true" />
+
       <WaveBackground />
       <div className={styles.content}>
         <div className={styles.wordmark} aria-label="youCode">

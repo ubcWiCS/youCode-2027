@@ -29,8 +29,6 @@ export default function ContactCard() {
       <img src="/images/unicorn.svg" className={styles.unicorn} alt="" aria-hidden="true" />
 
       <div className={styles.inner}>
-        <Countdown />
-
         <img src={sayHello} className={styles.heading} alt="say hello." />
         <form className={styles.form} onSubmit={handleSubmit}>
           <label className={styles.field}>

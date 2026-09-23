@@ -13,6 +13,15 @@
   text-align: right;
 }
 
+.countdownDevice {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 320px;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .wordmark {
   display: flex;
   justify-content: flex-end;

@@ -12,6 +12,22 @@
   gap: 4px;
 }
 
+.countdownDevice {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 32px;
+}
+.circuits {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
 .unit {
   display: flex;
   flex-direction: column;
