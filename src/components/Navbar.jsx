@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <header className={styles.nav}>
       <a href="#top" className={styles.logo} aria-label="youCode home">
-        <img src={logo} width="44" height="44" alt="" />
+        <img src={logo} width="56" height="56" alt="" />
       </a>
       <nav className={styles.links} aria-label="Primary">
         {LINKS.map((label) => (

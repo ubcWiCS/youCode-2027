@@ -93,7 +93,7 @@ export default function ContactCard() {
           {status === 'error' && <p className={styles.statusError}>Something went wrong. Try again.</p>}
         </form>
 
-        <h2 className={styles.heading}>stay connected.</h2>
+        <h2 className={styles.subheading}>stay connected.</h2>
         <div className={styles.socials}>
           {SOCIALS.map(({ name, href, icon: Icon }) => (
             <a key={name} href={href} target="_blank" rel="noreferrer" aria-label={name} className={styles.socialLink}>
@@ -101,8 +101,6 @@ export default function ContactCard() {
             </a>
           ))}
         </div>
-
-        <p className={styles.footer}>youCode © 2027 — coming soon</p>
       </div>
     </section>
   )

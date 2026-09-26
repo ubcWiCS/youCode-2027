@@ -1,4 +1,27 @@
 .page {
+  position: relative;
   min-height: 100vh;
-  background: var(--purple-light);
+  display: flow-root; /* contain child margins so body bg never shows below */
+  background: var(--gradient-page);
+}
+
+/* Grain sits over everything, like the print texture in the Figma poster */
+.page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  background-image: var(--grain);
+  mix-blend-mode: soft-light;
+  opacity: 0.4;
+}
+
+.footer {
+  padding: 0 24px 44px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ice-blue);
+  opacity: 0.75;
 }

@@ -1,9 +1,9 @@
 .card {
   position: relative;
   overflow: hidden;
-  margin: 0 clamp(20px, 5vw, 64px) clamp(48px, 8vw, 96px);
+  margin: 0 clamp(20px, 5vw, 64px) clamp(28px, 4vw, 48px);
   border-radius: 24px;
-  background: radial-gradient(120% 100% at 50% 0%, #2a1f6e 0%, var(--navy) 55%);
+  background: var(--navy); /* flat navy per Figma; card layers over the page gradient */
   padding: clamp(32px, 6vw, 64px) clamp(20px, 6vw, 72px) clamp(48px, 7vw, 72px);
 }
 
@@ -24,6 +24,15 @@
 
 .inner .heading:first-of-type {
   margin-top: 40px;
+}
+
+.subheading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(30px, 4.4vw, 40px);
+  color: var(--purple-pale);
+  margin: 56px 0 28px;
 }
 
 .form {
@@ -112,13 +121,15 @@
   transform: translateY(-2px);
 }
 
-.footer {
-  margin-top: 56px;
-  font-family: var(--font-body);
-  font-weight: 300;
-  font-size: 15px;
-  color: var(--cream);
-  opacity: 0.85;
+.circuits {
+  position: absolute;
+  right: -70px;
+  bottom: -80px;
+  width: 380px;
+  opacity: 0.35;
+  z-index: 0;
+  transform: scaleX(-1);
+  pointer-events: none;
 }
 
 .leaves {
@@ -170,6 +181,11 @@
 }
 
 @media (max-width: 640px) {
+  .circuits {
+    width: 220px;
+    right: -60px;
+    bottom: -50px;
+  }
   .leaves {
     width: 90px;
     height: 90px;

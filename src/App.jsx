@@ -11,6 +11,7 @@ export default function App() {
         <Hero />
         <ContactCard />
       </main>
+      <footer className={styles.footer}>youCode © 2027 — coming soon</footer>
     </div>
   )
 }
