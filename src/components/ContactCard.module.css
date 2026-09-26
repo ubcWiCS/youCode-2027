@@ -179,3 +179,12 @@
     left: 8px;
   }
 }
+.statusSuccess {
+  color: #4ade80;
+  font-size: 14px;
+}
+
+.statusError {
+  color: #f87171;
+  font-size: 14px;
+}

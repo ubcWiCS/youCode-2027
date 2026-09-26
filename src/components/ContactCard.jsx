@@ -1,4 +1,4 @@
-import Countdown from './Countdown'
+import { useState } from 'react'
 import leaf1 from '../assets/Leaf-cluster-1.svg'
 import leaf2 from '../assets/Leaf-cluster-2.svg'
 import leaf3 from '../assets/Leaf-cluster-3.svg'
@@ -14,13 +14,38 @@ const SOCIALS = [
 ]
 
 export default function ContactCard() {
-  function handleSubmit(e) {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [status, setStatus] = useState(null)
+
+  async function handleSubmit(e) {
     e.preventDefault()
-    alert('This form isn\'t connected to anything yet.')
+    setStatus('sending')
+
+    try {
+      const res = await fetch('https://formspree.io/f/xwlpnzkl', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        setName('')
+        setEmail('')
+        setMessage('')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
     <section className={styles.card} id="contact">
+      <img src="/images/group-r-5.svg" className={styles.circuits} alt="" aria-hidden="true" />
       <img src={leaf1} className={`${styles.leaves} ${styles.leavesTopRight}`} alt="" aria-hidden="true" />
       <img src={leaf2} className={`${styles.leaves} ${styles.leavesBottomLeft}`} alt="" aria-hidden="true" />
       <img src={leaf3} className={`${styles.leaves} ${styles.leavesBottomRight}`} alt="" aria-hidden="true" />
@@ -33,19 +58,39 @@ export default function ContactCard() {
         <form className={styles.form} onSubmit={handleSubmit}>
           <label className={styles.field}>
             <span className={styles.fieldLabel}>name</span>
-            <input type="text" name="name" autoComplete="name" required />
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              autoComplete="name"
+              required
+            />
           </label>
           <label className={styles.field}>
             <span className={styles.fieldLabel}>email</span>
-            <input type="email" name="email" autoComplete="email" required />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
+              required
+            />
           </label>
           <label className={styles.field}>
             <span className={styles.fieldLabel}>message</span>
-            <textarea name="message" rows={5} required />
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              rows={5}
+              required
+            />
           </label>
           <button type="submit" className={styles.submit}>
             Send message
           </button>
+
+          {status === 'success' && <p className={styles.statusSuccess}>Message sent! 🎉</p>}
+          {status === 'error' && <p className={styles.statusError}>Something went wrong. Try again.</p>}
         </form>
 
         <h2 className={styles.heading}>stay connected.</h2>
