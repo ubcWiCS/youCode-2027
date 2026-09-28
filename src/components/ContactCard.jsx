@@ -8,9 +8,9 @@ import sayHello from '../assets/say-hello.svg'
 import styles from './ContactCard.module.css'
 
 const SOCIALS = [
-  { name: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { name: 'LinkedIn', href: 'https://linkedin.com', icon: LinkedInIcon },
-  { name: 'TikTok', href: 'https://tiktok.com', icon: TikTokIcon },
+  { name: 'Instagram', href: 'https://www.instagram.com/youcode.ubc/', icon: InstagramIcon },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/youcode-ubc', icon: LinkedInIcon },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@youcode.ubc', icon: TikTokIcon },
 ]
 
 export default function ContactCard() {
@@ -45,13 +45,21 @@ export default function ContactCard() {
 
   return (
     <section className={styles.card} id="contact">
-      <img src="/images/group-r-5.svg" className={styles.circuits} alt="" aria-hidden="true" />
-      <img src={leaf1} className={`${styles.leaves} ${styles.leavesTopRight}`} alt="" aria-hidden="true" />
-      <img src={leaf2} className={`${styles.leaves} ${styles.leavesBottomLeft}`} alt="" aria-hidden="true" />
-      <img src={leaf3} className={`${styles.leaves} ${styles.leavesBottomRight}`} alt="" aria-hidden="true" />
-      <img src={leaf4} className={`${styles.leaves} ${styles.leavesMidLeft}`} alt="" aria-hidden="true" />
-      <img src={leaf5} className={`${styles.leaves} ${styles.leavesMidRight}`} alt="" aria-hidden="true" />
+      <div className={styles.clip}>
+        <img src="/images/group-r-5.svg" className={styles.circuits} alt="" aria-hidden="true" />
+      </div> 
+      <img src={leaf2} className={`${styles.leaf} ${styles.trA}`} alt="" aria-hidden="true" />
+      <img src={leaf5} className={`${styles.leaf} ${styles.trB}`} alt="" aria-hidden="true" />
+      <img src={leaf5} className={`${styles.leaf} ${styles.trC}`} alt="" aria-hidden="true" />
+      <img src={leaf5} className={`${styles.leaf} ${styles.trD}`} alt="" aria-hidden="true" />
+      {/* bottom left */}
+      <img src={leaf5} className={`${styles.leaf} ${styles.blA}`} alt="" aria-hidden="true" />
+      <img src={leaf5} className={`${styles.leaf} ${styles.blB}`} alt="" aria-hidden="true" />
       <img src="/images/unicorn.svg" className={styles.unicorn} alt="" aria-hidden="true" />
+      <img src={leaf5} className={`${styles.leaf} ${styles.blC}`} alt="" aria-hidden="true" />
+      {/* bottom right */}
+      <img src={leaf4} className={`${styles.leaf} ${styles.brA}`} alt="" aria-hidden="true" />
+      <img src={leaf5} className={`${styles.leaf} ${styles.brB}`} alt="" aria-hidden="true" />
 
       <div className={styles.inner}>
         <img src={sayHello} className={styles.heading} alt="say hello." />
