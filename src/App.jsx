@@ -6,7 +6,7 @@ import styles from './App.module.css'
 export default function App() {
   return (
     <div className={styles.page}>
-      <Navbar />
+      {/*<Navbar />*/}
       <main>
         <Hero />
         <ContactCard />
