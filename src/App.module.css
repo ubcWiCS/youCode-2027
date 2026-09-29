@@ -1,11 +1,12 @@
 .page {
   position: relative;
   min-height: 100vh;
-  display: flow-root; /* contain child margins so body bg never shows below */
+  min-height: 100dvh;  
+  display: flow-root;
+  overflow-x: clip; 
   background: var(--gradient-page);
 }
 
-/* Grain sits over everything, like the print texture in the Figma poster */
 .page::after {
   content: '';
   position: absolute;
@@ -18,14 +19,12 @@
 }
 
 .footer {
+  position: relative;
+  z-index: 2;
   padding: 0 24px 44px;
   text-align: center;
   font-size: 15px;
   font-weight: 400;
   color: var(--ice-blue);
   opacity: 0.75;
-}
-
-body {
-  overflow-x: clip;
 }

@@ -12,11 +12,8 @@
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body: 'Montserrat', system-ui, sans-serif;
 
-  /* One continuous page gradient; sections are transparent layers over it */
   --gradient-page: linear-gradient(180deg, var(--purple-light) 0%, var(--navy) 100%);
-  /* Navbar: brand blue at 30% opacity over the gradient (sampled from Figma) */
   --nav-surface: color-mix(in srgb, var(--blue) 30%, transparent);
-  /* Print-style grain: tiled monochrome SVG turbulence, blended over the page */
   --grain: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>");
 }
 
@@ -27,6 +24,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: clip; 
 }
 
 body {
