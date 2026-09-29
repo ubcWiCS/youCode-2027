@@ -186,15 +186,10 @@
 
 @media (max-width: 640px) {
   .card {
-    --s: clamp(34px, 9vw, 50px);   /* smaller leaves so overhang ≈ card margin */
-    --tail: 6vw;
-    margin-bottom: calc(var(--s) * 2.6);   /* room for leaves hanging below */
-    padding-bottom: calc(var(--s) * 3.8);  /* dedicated strip for the unicorn, below the socials */
-  }
-
-  .unicorn {
-    width: calc(var(--s) * 3.4);
-    left: calc(var(--s) * 0.2);
+    --s: 10vw;                          
+    --tail: calc(var(--s) * 1.14);      
+    margin-bottom: calc(var(--s) * 2.6);
+    padding-bottom: calc(var(--s) * 3.8);
   }
 
   .circuits {
@@ -205,10 +200,10 @@
 
   .field input,
   .field textarea {
-    font-size: 16px;               /* stops iOS zoom-on-focus */
+    font-size: 16px;              
   }
 
   .submit {
-    align-self: stretch;           /* full-width button */
+    align-self: stretch;          
   }
 }
