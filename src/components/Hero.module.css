@@ -7,8 +7,9 @@
 .content {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 520px; /* was 640px — narrower column sits closer to the cyberdeck */
   margin-left: auto;
+  margin-right: clamp(20px, 4vw, 60px); /* pull it inward from the edge */
   text-align: right;
 }
 
@@ -21,30 +22,23 @@
   pointer-events: none;
 }
 
-.wordmark {
-  display: flex;
-  justify-content: flex-end;
-  gap: 2px;
-  margin: 0;
-}
-
-.wordmark img {
+.wordmarkImg {
   height: clamp(36px, 6vw, 56px);
   width: auto;
-  display: block;
-}
-
-.wordmarkAccent {
-  color: var(--purple-pale);
+  margin-left: auto;
 }
 
 .tagline {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(32px, 5vw, 48px);
-  color: var(--text-heading);
+  font-size: 40px;
   margin: 4px 0 40px;
+  background: linear-gradient(90deg, #C4DCFF 7%, #E9E3FF 52%, #C5B6FF 96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .description {

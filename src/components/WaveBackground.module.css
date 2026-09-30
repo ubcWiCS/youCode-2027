@@ -6,19 +6,24 @@
   z-index: 0;
 }
 
+.wavesScrollWrap {
+  position: absolute;
+  inset: 0;
+}
+
 .waves {
   position: absolute;
   left: 0;
-  bottom: -12px; /* bleed below the hero edge so the drift never reveals a gap */
+  bottom: -12px;
   width: 100%;
   height: auto;
-  min-height: 200px; /* keep the band substantial on narrow screens */
+  min-height: 200px;
   object-fit: cover;
   object-position: center top;
-  animation: drift 9s ease-in-out infinite;
+  animation: drift 4s ease-in-out infinite;
 }
 
 @keyframes drift {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
+  50% { transform: translateY(-10px); }
 }

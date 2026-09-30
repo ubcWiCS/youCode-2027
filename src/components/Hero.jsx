@@ -1,6 +1,7 @@
 import WaveBackground from './WaveBackground'
 import styles from './Hero.module.css'
 import countdownDevice from '../assets/countdown.svg'
+import youCodeLogo from '../assets/youCode.svg'
 
 export default function Hero() {
   return (
@@ -10,12 +11,7 @@ export default function Hero() {
 
       <WaveBackground />
       <div className={styles.content}>
-        <div className={styles.wordmark} aria-label="youCode">
-          <img src="/images/y.svg" alt="" />
-          <img src="/images/o.svg" alt="" />
-          <img src="/images/u.svg" alt="" />
-          <img src="/images/code.svg" alt="" />
-        </div>
+        <img src={youCodeLogo} className={styles.wordmarkImg} alt="youCode" />
         <p className={styles.tagline}>coming soon.</p>
         <p className={styles.description}>
           youCode is a 24-hour hackathon dedicated to fostering gender inclusivity

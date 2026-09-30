@@ -15,7 +15,7 @@
   pointer-events: none;
   background-image: var(--grain);
   mix-blend-mode: soft-light;
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
 .footer {
